@@ -7,3 +7,5 @@ export interface User {
     profilephoto?: string;
     gender: 'MALE' | 'FEMALE' | 'OTHER';
 }
+
+

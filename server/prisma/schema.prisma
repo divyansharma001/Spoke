@@ -21,11 +21,30 @@ OTHER
 }
 
 model User {
-  id         Int      @id @default(autoincrement())
-  fullname   String
-  username   String   @unique
-  email      String   @unique
-  password   String
-  profilephoto String? @default("./images/profilepic.png")
-  gender  Gender
+  id           Int       @id @default(autoincrement())
+  fullname     String
+  username     String    @unique
+  email        String    @unique
+  password     String
+  profilephoto String?   @default("./images/profilepic.png")
+  gender       Gender
+  sentMessages Message[] @relation("SenderRelation")
+  receivedMessages Message[] @relation("ReceiverRelation")
+}
+
+model Message {
+  message_id     Int           @id @default(autoincrement())
+  sender_id      Int
+  receiver_id    Int
+  message        String
+  sender         User          @relation("SenderRelation", fields: [sender_id], references: [id])
+  receiver       User          @relation("ReceiverRelation", fields: [receiver_id], references: [id])
+  conversation   Conversation? @relation(fields: [conversation_id], references: [conversation_id])
+  conversation_id Int?
+}
+
+model Conversation {
+  conversation_id Int   @id @default(autoincrement())
+  participants    Int[] 
+  messages        Message[]
 }
