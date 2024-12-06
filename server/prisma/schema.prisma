@@ -14,11 +14,6 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-enum Gender{
-MALE
-FEMALE
-OTHER
-}
 
 model User {
   id           Int       @id @default(autoincrement())
@@ -27,7 +22,7 @@ model User {
   email        String    @unique
   password     String
   profilephoto String?   @default("./images/profilepic.png")
-  gender       Gender
+  gender       String?
   sentMessages Message[] @relation("SenderRelation")
   receivedMessages Message[] @relation("ReceiverRelation")
 }

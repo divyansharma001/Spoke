@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
- "scripts": {
+  "scripts": {
     "start": "node dist/index.js",
-    "dev": "tsc-watch --onsuccess \"node dist/index.js\"",
+    "dev": "tsc-watch --onsuccess \"nodemon dist/index.js\"",
     "postinstall": "prisma generate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
     "concurrently": "^9.1.0",
