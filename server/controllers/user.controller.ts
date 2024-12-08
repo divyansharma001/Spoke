@@ -15,7 +15,9 @@ export const signup = async (req: RegisterRequest, res: Response) => {
     if (!result.success) {
       res.status(400).json({
         message: "Validation Error",
-        error: result.error.flatten(),
+        error: result.error.issues.forEach((issue) => {
+          console.error(`Path: ${issue.path}, Message: ${issue.message}`);
+        })
       });
       return;
     }
@@ -65,6 +67,7 @@ export const signup = async (req: RegisterRequest, res: Response) => {
 
     return;
   } catch (error) {
+    
     console.error(error);
   }
 };
@@ -75,7 +78,9 @@ export const signin = async (req: LoginRequest, res: Response) => {
     if (!result.success) {
       res.status(400).json({
         message: "Validation Error",
-        error: result.error.flatten(),
+        error: result.error.issues.forEach((issue) => {
+          console.error(`Path: ${issue.path}, Message: ${issue.message}`);
+        }),
       });
       return;
     }
