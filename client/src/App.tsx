@@ -1,12 +1,12 @@
+import { Button } from './components/ui/button'
 import './index.css'
+
 
 function App() {
 
   return (
     <>
-     <h1 className="text-3xl font-bold underline">
-      checking tailwindcss
-    </h1>
+     <Button>Click me</Button>
     </>
   )
 }
