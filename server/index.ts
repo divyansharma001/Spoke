@@ -16,7 +16,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', IndexRouter);
 
 app.get('/test', (req, res)=>{
-    res.send('Backend is working');
+    res.json({
+        message: 'backend is working'
+    })
 })
 
 app.listen(PORT, ()=>{
