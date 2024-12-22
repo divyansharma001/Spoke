@@ -1,6 +1,8 @@
 import express from 'express'
 import 'dotenv/config'
+import cookieParser from 'cookie-parser'
 import IndexRouter from './routes/index.route.js';
+
 
 const PORT = process.env.PORT || 5000;
 
@@ -10,6 +12,7 @@ app.use(express.static('public'));
 
 app.use(express.json());
 
+app.use(cookieParser());
 
 app.use(express.urlencoded({ extended: true }));
 
