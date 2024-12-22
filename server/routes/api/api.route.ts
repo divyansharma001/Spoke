@@ -1,5 +1,5 @@
 import { Router } from "express";
-import V1Router from "./v1/v1.route";
+import V1Router from "./v1/v1.route.js";
 const ApiRouter = Router();
 
 ApiRouter.use("/v1", V1Router);

@@ -1,8 +1,8 @@
 import { Response } from "express";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
-import { LoginRequest } from "../types/loginRequest";
-import { loginSchema } from "../schemas/login.schema";
+import { LoginRequest } from "../types/loginRequest.js";
+import { loginSchema } from "../schemas/login.schema.js";
 
 const prisma = new PrismaClient();
 export const signin = async (req: LoginRequest, res: Response) => {
@@ -37,7 +37,7 @@ export const signin = async (req: LoginRequest, res: Response) => {
 
     if (!isPasswordValid) {
       res.status(400).json({
-        message: "Invalid Password",
+        message: "Incorrect Password",
       });
       return;
     }

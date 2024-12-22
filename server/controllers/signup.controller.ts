@@ -1,11 +1,8 @@
 import { Response } from "express";
-import { registerSchema } from "../schemas/register.schema";
-import { RegisterRequest } from "../types/registerRequest";
+import { registerSchema } from "../schemas/register.schema.js";
+import { RegisterRequest } from "../types/registerRequest.js";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
-import { register } from "module";
-import { LoginRequest } from "../types/loginRequest";
-import { loginSchema } from "../schemas/login.schema";
 
 const prisma = new PrismaClient();
 export const signup = async (req: RegisterRequest, res: Response) => {
@@ -13,7 +10,7 @@ export const signup = async (req: RegisterRequest, res: Response) => {
     const result = registerSchema.safeParse(req.body);
 
     if (!result.success) {
-      res.status(400).json({
+      res.status(400).json({ 
         message: "Validation Error",
         error: result.error.issues.forEach((issue) => {
           console.error(`Path: ${issue.path}, Message: ${issue.message}`);
@@ -32,6 +29,7 @@ export const signup = async (req: RegisterRequest, res: Response) => {
       return;
     }
 
+
     const existingUser = await prisma.user.findFirst({
       where: {
         email,
@@ -39,7 +37,6 @@ export const signup = async (req: RegisterRequest, res: Response) => {
       },
     });
 
-    console.log(existingUser);
 
     if (existingUser) {
       res.status(400).json({
@@ -50,6 +47,11 @@ export const signup = async (req: RegisterRequest, res: Response) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    //handling profile photo
+
+    const maleProfilePhoto = `https://avatar.iran.liara.run/public/boy?username=${username}`
+    const femaleProfilePhoto = `https://avatar.iran.liara.run/public/girl?username=${username}`
+
     const user = await prisma.user.create({
       data: {
         email,
@@ -57,6 +59,7 @@ export const signup = async (req: RegisterRequest, res: Response) => {
         fullname,
         password: hashedPassword,
         gender,
+        profilephoto: gender == "male" ? maleProfilePhoto : femaleProfilePhoto 
       },
     });
 

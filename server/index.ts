@@ -1,6 +1,6 @@
 import express from 'express'
 import 'dotenv/config'
-import IndexRouter from './routes/index.route';
+import IndexRouter from './routes/index.route.js';
 
 const PORT = process.env.PORT || 5000;
 
