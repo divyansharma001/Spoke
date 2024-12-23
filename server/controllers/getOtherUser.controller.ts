@@ -4,7 +4,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 export const getOtherUser = async (req: Request, res: Response) => {
   try {
-    const loggedInUserId = req.body.userId;
+    const loggedInUserId = req.body.id;
     const otherUsers = await prisma.user.findMany({
       where: {
         NOT: {
