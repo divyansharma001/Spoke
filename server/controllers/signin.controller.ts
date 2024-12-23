@@ -44,7 +44,7 @@ export const signin = async (req: LoginRequest, res: Response) => {
     }
 
     const tokenData = {
-      userId: user.id,
+      userId: user.id,   //this is the data that we want to store in the token and will be recieved when the token is decoded
     }
 
     if (!process.env.JWT_SECRET_KEY) {
