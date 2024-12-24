@@ -5,9 +5,19 @@ const prisma = new PrismaClient();
 
 export const sendMessage = async (req: Request, res: Response) => {
   try {
-    const sender_id = +req.body.id;
+   
+    if(req?.userId === undefined){
+      res.status(401).json({
+        message: "User is not authenticated"
+      })
+      return;
+    }
+
+    const sender_id = +req?.userId;
     const receiver_id = +req.params.id;
     const { message } = req.body;
+
+    console.log(sender_id, "sender_id");
 
     let gotConversation = await prisma.conversation.findFirst({
       where: {
@@ -39,11 +49,16 @@ export const sendMessage = async (req: Request, res: Response) => {
       },
     });
 
-    console.log(gotConversation);
+    console.log(gotConversation, "gotConversation");
+    console.log(newMessage, "newMessage");
 
     if (newMessage) {
       gotConversation.messages.push(newMessage)
     }
+
+    res.status(200).json(gotConversation);
+
+    return;
 
   } catch (error) {
     console.error(error);
