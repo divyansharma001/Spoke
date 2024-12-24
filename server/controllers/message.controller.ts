@@ -5,14 +5,14 @@ const prisma = new PrismaClient();
 
 export const sendMessage = async(req: Request, res: Response) => {
 try {
-    const senderId = req.body.id;
-    const receiverId = req.params.id;
+    const sender_id = +req.body.id;
+    const receiver_id = +req.params.id
     const {message} = req.body;
 
     let gotConversation = await prisma.conversation.findFirst({
         where: {
           participants: {
-            hasEvery: [senderId, receiverId] 
+            hasEvery: [sender_id, receiver_id] 
           }
         },
         select: {
@@ -23,10 +23,18 @@ try {
       if (!gotConversation) {
         gotConversation = await prisma.conversation.create({
           data: {
-            participants: [senderId, receiverId] 
+            participants: [sender_id, receiver_id]
           }
         });
       }
+
+      const newMessage = await prisma.message.create({
+        data: {
+          receiver_id,
+          sender_id,
+          message
+        }
+      })
       
 } catch (error) {
     console.error(error);
