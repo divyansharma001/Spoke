@@ -28,7 +28,7 @@ const isAuthenticated = async (req: Request, res: Response, next: NextFunction) 
         return;
      }
 
-      req.body.id = (decode as jwt.JwtPayload).userId;  //this makes the id available in the req.body
+      req.userId = (decode as jwt.JwtPayload).userId;  //this makes the id available in the req.body
 
      next();
 
