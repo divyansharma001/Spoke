@@ -4,7 +4,13 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 export const getOtherUser = async (req: Request, res: Response) => {
   try {
-    const loggedInUserId = req.body.id;
+    if(req?.userId === undefined){
+      res.status(401).json({
+        message: "User is not authenticated"
+      })
+      return;
+    }
+    const loggedInUserId = +req?.userId;
     const otherUsers = await prisma.user.findMany({
       where: {
         NOT: {
