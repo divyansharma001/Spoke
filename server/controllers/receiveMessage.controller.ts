@@ -24,7 +24,7 @@ export const receiveMessage = async(req: Request, res: Response) => {
             }
         })
 
-        console.log(conversation, "conversation");
+        console.log(conversation?.messages, "conversation");
 
         res.status(200).json({
             message: "Messages received successfully",
