@@ -25,6 +25,11 @@ export const receiveMessage = async(req: Request, res: Response) => {
         })
 
         console.log(conversation, "conversation");
+
+        res.status(200).json({
+            message: "Messages received successfully",
+            conversation
+        })
     } catch (error) {
         console.error(error);
     }
