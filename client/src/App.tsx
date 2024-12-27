@@ -1,5 +1,6 @@
 
 import './index.css'
+import HeroSection from './pages/HeroSection'
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   return (
     <>
      <div className='bg-black text-white min-h-screen'>
-       This will contain the main content of the app
+       <HeroSection/>
      </div>
     </>
   )
