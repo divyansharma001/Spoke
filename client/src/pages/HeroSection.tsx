@@ -1,7 +1,21 @@
+import { useEffect, useState } from "react";
+import { FirstHeading } from "@/components/Heading";
+
 const HeroSection = () => {
+  const [FirstHeadingComponent, setFirstHeadingComponent] = useState<JSX.Element | null>(null);
+
+  useEffect(() => {
+    const loadFirstHeading = async () => {
+      const component = await FirstHeading();
+      setFirstHeadingComponent(component);
+    };
+    loadFirstHeading();
+  }, []);
+
   return (
-    
-    <div className="bg-black text-white flex flex-col items-center justify-center min-h-[60vh] p-10 space-y-6">
+    <div className="bg-black text-white min-h-screen">
+    <div>{FirstHeadingComponent}</div>
+    <div className="bg-black text-white flex flex-col items-center justify-center p-10  space-y-6">
       <div className="text-4xl font-normal space-y-4">
         <div className="flex items-center gap-3">
           <span>From Chats to</span>
@@ -18,6 +32,8 @@ const HeroSection = () => {
           <span>!</span>
         </div>
       </div>
+    </div>
+
     </div>
   );
 };
