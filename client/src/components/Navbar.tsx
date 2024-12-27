@@ -1,4 +1,7 @@
 import logo from '../assets/talk.png'
+import { Button } from "@/components/ui/button"
+
+
 const Navbar = () => {
   return (
     <>
@@ -8,8 +11,8 @@ const Navbar = () => {
       <div className='text-xl font-semibold'>Spoke</div>
     </div>
     <div className="flex items-center space-x-8 pr-10">
-    <div>Login</div>
-    <div>Signup</div>
+    <div><Button>Login</Button></div>
+    <div><Button>Signup</Button></div>
     </div>
     </div>
     </>
