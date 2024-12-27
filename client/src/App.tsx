@@ -6,7 +6,9 @@ function App() {
 
   return (
     <>
-     <Button>Click me</Button>
+     <div className='bg-black text-white min-h-screen'>
+       This will contain the main content of the app
+     </div>
     </>
   )
 }
