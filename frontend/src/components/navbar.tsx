@@ -1,8 +1,8 @@
 import logo from "@/assets/talk.png";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
-import InteractiveHoverButton from "./ui/interactive-hover-button";
+import ShinyButton from "./ui/shiny-button";
+
 
 const Navbar = () => {
   return (
@@ -26,14 +26,10 @@ const Navbar = () => {
         </div>
         <div className="flex items-center space-x-8 pr-10">
           <div>
-          <button className="px-6 py-2  bg-black text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg">
-        Login
-      </button>
+          <ShinyButton>Login</ShinyButton>
           </div>
           <div>
-          <button className="px-6 py-2  bg-black text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg">
-        Signup
-      </button>
+          <ShinyButton>Signup</ShinyButton>
           </div>
         </div>
       </div>
