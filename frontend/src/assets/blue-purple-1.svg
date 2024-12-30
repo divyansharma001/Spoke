@@ -1,12 +1,4 @@
-import { HighLightText } from '@/components/HighLight'
-import FlipText from '@/components/ui/flip-text'
-import React from 'react'
-
-const Homepage = () => {
-  return (
-   <>
-   <div className="absolute inset-0 -z-10">
-          <svg
+<svg
             width="1265"
             height="1210"
             viewBox="0 0 1265 1210"
@@ -17,7 +9,7 @@ const Homepage = () => {
               <path
                 opacity="0.5"
                 d="M464.569 564.678C457.659 588.507 430.809 599.979 426.649 625.588C426.059 632.478 418.529 645.428 393.139 642.111C368.669 656.336 292.909 628.697 274.409 652.471C260.789 669.973 245.799 691.802 251.089 723.272C255.169 747.536 268.749 771.454 282.509 792.105C302.449 822.018 325.979 849.223 351.399 870.762C434.239 940.978 529.089 959.256 611.169 959.506C711.179 959.816 797.819 921.193 870.749 859.425C900.829 833.952 927.769 804.466 948.479 766.932C967.539 732.375 983.049 693.738 995.019 652.834C1010.27 600.763 1018.86 542.381 1012.47 479.216C1007.62 431.174 987.009 385.361 958.469 343.538C919.469 286.361 867.039 253.896 816.269 250.237C784.949 247.981 750.179 261.548 748.729 303.898C747.629 336.205 762.549 372.514 772.229 405.683C778.689 427.849 787.499 459.242 772.729 470.803C747.749 490.36 712.959 495.977 681.459 499.938C641.219 504.998 598.139 494.109 556.259 491.446C532.139 489.912 512.599 501.741 495.439 516.208C481.649 527.841 470.499 544.249 464.569 564.678Z"
-                fill="#2979ff"
+                fill="#FF1CF7"
               />
             </g>
             <g opacity="0.3" filter="url(#filter1_f_577_931)">
@@ -35,9 +27,9 @@ const Homepage = () => {
                 width="1264.6"
                 height="1209.51"
                 filterUnits="userSpaceOnUse"
-                colorInterpolationFilters="sRGB"
+                color-interpolation-filters="sRGB"
               >
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_577_931" />
               </filter>
@@ -48,28 +40,11 @@ const Homepage = () => {
                 width="1264.6"
                 height="1209.51"
                 filterUnits="userSpaceOnUse"
-                colorInterpolationFilters="sRGB"
+                color-interpolation-filters="sRGB"
               >
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_577_931" />
               </filter>
             </defs>
           </svg>
-        </div>
-    <HighLightText/>
-    <div>
-    <div className='text-7xl text-center mt-10'>
-      From <span className="font font-thin italic text-pretty text-[#2979ff]">Chats</span> to <span className="font font-thin italic text-pretty text-[#2979ff]">Connections</span>
-      <br />
-      <FlipText
-      className="text-7xl -tracking-widest text-white md:text-7xl md:leading-[5rem]"
-      word="We've got you Covered !"
-    />
-    </div>
-    </div>
-   </>
-  )
-}
-
-export default Homepage
