@@ -2,6 +2,8 @@ import logo from "@/assets/talk.png";
 import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
 import ShinyButton from "./ui/shiny-button";
+import { Inter } from "next/font/google";
+import InteractiveHoverButton from "./ui/interactive-hover-button";
 
 
 const Navbar = () => {
@@ -24,14 +26,15 @@ const Navbar = () => {
           </div>
           <div className="text-xl font-semibold">Sp<span className="underline underline-offset-2 decoration-solid decoration-[#8ec4ff]">oke</span></div>
         </div>
-        <div className="flex items-center space-x-8 pr-10">
+        {/* <div className="flex items-center space-x-8 pr-10">
           <div>
           <ShinyButton>Login</ShinyButton>
           </div>
           <div>
           <ShinyButton>Signup</ShinyButton>
           </div>
-        </div>
+        </div> */}
+        <InteractiveHoverButton/>
       </div>
     </>
   );

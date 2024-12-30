@@ -1,6 +1,10 @@
+
 import { HighLightText } from '@/components/HighLight'
 import FlipText from '@/components/ui/flip-text'
+import FeaturesCard from '@/components/featuresCard'
 import React from 'react'
+import TechStack from '@/components/TechStack'
+
 
 const Homepage = () => {
   return (
@@ -67,6 +71,15 @@ const Homepage = () => {
       word="We've got you Covered !"
     />
     </div>
+
+     <div className='p-12'>
+      <FeaturesCard/>
+     </div>
+
+     <div>
+      <TechStack/>
+     </div>
+     
     </div>
    </>
   )
