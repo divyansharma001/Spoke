@@ -20,9 +20,18 @@ type BentoCardProps = {
 
 const BentoGrid = ({ children, className }: BentoGridProps) => {
   return (
+    <>
+
+    <div className="flex border border-red-600">
+    
     <div className={cn("grid w-3/4 mx-auto auto-rows-[16rem] grid-cols-3 gap-3", className)}>
       {children}
     </div>
+
+
+    </div>
+
+    </>
   );
 };
 
