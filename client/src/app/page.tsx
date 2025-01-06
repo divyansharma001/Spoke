@@ -1,8 +1,9 @@
 
+import Features from '@/pages/Features'
 import Homepage from '@/pages/Homepage'
 import React from 'react'
 
-import { Features } from '@/pages/Features'
+
 
 const page = () => {
   return (
