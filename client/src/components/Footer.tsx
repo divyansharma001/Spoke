@@ -1,6 +1,6 @@
 import React from 'react'
 
-const footer = () => {
+const Last = () => {
   return (
     <>
     <div>
@@ -12,4 +12,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Last
