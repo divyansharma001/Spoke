@@ -4,7 +4,6 @@ import { RiChatAiLine } from "react-icons/ri";
 import { FaMicrophoneAlt } from "react-icons/fa";
 import { MdOutlineMissedVideoCall } from "react-icons/md";
 import { RiFileShredLine } from "react-icons/ri";
-import BlurFade from "./ui/blur-fade";
 
 interface FeatureCardProps {
   title: string;

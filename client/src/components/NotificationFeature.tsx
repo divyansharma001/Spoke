@@ -31,7 +31,7 @@ const NotificationFeature = () => {
           
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             Stay connected with real-time chat notifications. Get instant alerts when new messages 
-            arrive, even when you're in another chat or away from the active window.
+            arrive, even when you&apos;re in another chat or away from the active window.
           </p>
 
           {/* Feature List */}
