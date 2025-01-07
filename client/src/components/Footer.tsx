@@ -1,15 +1,9 @@
 import React from 'react'
 
-const Last = () => {
+const Footer = () => {
   return (
-    <>
-    <div>
-    <div></div>
-    <div></div>
-    <div></div>
-    </div>
-    </>
+    <div>Footer</div>
   )
 }
 
-export default Last
+export default Footer
