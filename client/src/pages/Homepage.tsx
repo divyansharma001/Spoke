@@ -63,11 +63,11 @@ const Homepage = () => {
         </div>
     <HighLightText/>
     <div>
-    <div className='text-7xl text-center mt-10'>
+    <div className='md:text-7xl text-2xl sm:text-5xl text-center md:mt-10 mt-6 sm:mt-8'>
       From <span className="font font-thin italic text-pretty text-[#2979ff]">Chats</span> to <span className="font font-thin italic text-pretty text-[#2979ff]">Connections</span>
       <br />
       <FlipText
-      className="text-7xl -tracking-widest text-white md:text-7xl md:leading-[5rem]"
+      className="md:text-7xl text-2xl sm:text-5xl -tracking-widest text-white md:leading-[5rem]"
       word="We've got you Covered !"
     />
     </div>
