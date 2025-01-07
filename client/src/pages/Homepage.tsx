@@ -72,7 +72,7 @@ const Homepage = () => {
     />
     </div>
 
-     <div className='p-12'>
+     <div className='sm:p-8 md:p-12 p-4'>
       <FeaturesCard/>
      </div>
 
