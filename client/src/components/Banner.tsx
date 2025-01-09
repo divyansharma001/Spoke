@@ -1,5 +1,5 @@
 'use client';
-import { Download, MailIcon, Sparkles } from 'lucide-react';
+import { MailIcon, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import Mockup from '@/assets/Mockup.png';
 import { motion } from 'framer-motion';
