@@ -6,15 +6,15 @@ import { Badge } from "@/components/ui/badge";
 
 const NotificationFeature = () => {
   return (
-    <section className="py-12 px-4 max-w-7xl mx-auto">
+    <section className="  py-12 px-4 max-w-7xl mx-auto">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
       {/* Left Column - Chat Notifications Demo */}
-      <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-6 rounded-xl shadow-lg">
+      <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-6 rounded-xl shadow-lg hidden lg:block">
         <AnimatedListDemo />
       </div>
       
       {/* Right Column - Content */}
-      <div className="space-y-8">
+      <div className="lg:space-y-8 space-y-4">
         {/* Feature Badge */}
         <div className="flex items-center space-x-2">
           <Badge variant="secondary" className="px-4 py-1 text-sm flex items-center gap-2">

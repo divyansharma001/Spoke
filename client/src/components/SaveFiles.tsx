@@ -57,7 +57,7 @@ const SaveFiles = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-6 rounded-xl shadow-lg">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-6 rounded-xl shadow-lg hidden lg:block">
           <MarqueeDemo/>
         </div>
       </div>

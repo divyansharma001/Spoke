@@ -9,7 +9,7 @@ import tsLogo from '@/assets/ts-logo-128.png'
 const TechStack = () => {
   return (
     <>
-      <div className="flex justify-center text-center text-gray-400 text-xl">
+      <div className="flex justify-center text-center text-gray-400 md:text-xl text-lg pt-5 sm:pt-8 md:pt-10 ">
         Supported and backed by
       </div>
       <div className="flex justify-center items-center text-gray-400 p-6 pt-4 space-x-6">

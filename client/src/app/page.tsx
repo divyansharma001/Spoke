@@ -10,7 +10,7 @@ const page = () => {
     <>
     
    <Homepage/>
-   <div className='p-24'><Features/></div>
+   <div className='lg:p-24 lg:pt-24 pt-8 p-4'><Features/></div>
    
    </>
   )
