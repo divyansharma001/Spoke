@@ -2,6 +2,7 @@ import logo from "@/assets/talk.png";
 import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
 import InteractiveHoverButton from "./ui/interactive-hover-button";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -22,9 +23,11 @@ const Navbar = () => {
               style={{ filter: "invert(1) brightness(2)" }}
             />
           </div>
+          <Link href={'/'}>
           <div className="text-lg sm:text-xl font-semibold">
             Sp<span className="underline underline-offset-2 decoration-solid decoration-[#8ec4ff]">oke</span>
           </div>
+          </Link>
         </div>
         <InteractiveHoverButton />
       </div>

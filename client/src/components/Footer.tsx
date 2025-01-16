@@ -7,10 +7,14 @@ const Footer = () => {
   return (
     <footer className="bg-gray-950 px-4 py-6 md:px-16 md:py-8 mt-5">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
-
+        
+        <Link href={'/'}>
+        
         <div className="text-xl font-semibold text-white md:text-2xl">
           Sp<span className="underline decoration-[#8ec4ff] decoration-solid underline-offset-2">oke</span>
         </div>
+
+        </Link>
 
 
         <p className="text-center text-sm text-[#8ec4ff] md:text-base">
