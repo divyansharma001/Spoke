@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import {
   IconBrandGithub,
   IconBrandGoogle,
-  IconBrandOnlyfans,
 } from "@tabler/icons-react";
 
 export function SignupForm() {
@@ -51,7 +50,7 @@ export function SignupForm() {
             type="submit"
           >
             <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+            <span className="text-neutral-700 dark:text-neutral-300 text-sm ">
               GitHub
             </span>
             <BottomGradient />
